@@ -1,0 +1,5 @@
+export const SEND_DATA = 'SEND_DATA'
+export const SEND_SC = 'SEND_SC'
+export const SEND_RATSTAR = 'SEND_RATSTAR'
+export const SEND_DESDATA = 'SEND_DESDATA'
+export const UL_TRANSLATE = 'UL_TRANSLATE'
