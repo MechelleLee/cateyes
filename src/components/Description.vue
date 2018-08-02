@@ -55,10 +55,10 @@
           <div class="head">短评</div>
           <div class="rat-list">
             <ul>
-              <li v-for="(item,index) in detailMovie.hcmts" v-if="index < 3">
+              <li v-for="(item,index) in hcmts" v-if="index < 3">
                 <p class="stars">
                 <span class="star" v-for="star in sendRatStar[index]"
-                      :class="{'on':star == 'on',half:star=='half',off:star =='off'}"></span><span
+                      :class="{'on':star === 'on',half:star==='half',off:star ==='off'}"></span><span
                   class="date">{{item.time}}</span>
                 </p>
                 <p class="content">{{item.content}}</p>
@@ -121,14 +121,28 @@
       return {
         detailMovie: {},
         viewNum: 1,
-        show: true
+        show: true,
+        hcmts: {}
       }
     },
     created () {
       setTimeout(() => {
+        console.log(this.des.detailMovie)
+        let self = this
+        this.$axios.get('/api/comment', {
+          params: {
+            id: this.des.detailMovie.id
+          }
+        })
+          .then((res) => {
+            self.hcmts = res.data.hcmts
+            this.ratStar()
+          })
+          .catch((err) => {
+            console.log(err)
+          })
         this.getStar(this.$refs.sc)
         this.detailMovie = this.des.detailMovie
-        this.ratStar()
       }, 500)
       this.$nextTick(() => {
         setTimeout(() => {
@@ -139,7 +153,7 @@
           } else {
             this.descScroll.refresh()
           }
-        }, 500)
+        }, 1000)
       })
     },
     computed: {
@@ -152,7 +166,7 @@
         this.SEND_SC({el, des})
       },
       ratStar () {
-        // this.SEND_RATSTAR(this.detailMovie.hcmts)
+        this.SEND_RATSTAR(this.hcmts)
       },
       view () {
         let draBox = this.$refs.drabox

@@ -60,6 +60,17 @@ apiRouter.get('/description', (req, res) => {
     })
 })
 
+apiRouter.get('/comment', (req, res) => {
+  let id = req.query.id
+  axios.get('http://m.maoyan.com/mmdb/comments/movie/'+ id +'.json?_v_=yes&offset=15&startTime=2018-08-02%2010%3A55%3A16')
+    .then((rs) => {
+      res.json(rs.data)
+    })
+    .catch((err) => {
+      console.log('no')
+    })
+})
+//http://m.maoyan.com/mmdb/comments/movie/1212592.json?_v_=yes&offset=15&startTime=2018-08-02%2010%3A55%3A16
 apiRouter.get('/details', (req, res) => {
   let id = req.query.id
   console.log(id)

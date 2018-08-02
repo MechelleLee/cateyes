@@ -46,6 +46,7 @@ const mutations = {
       }
       state.ratStar[i] = starArr
     }
+    // console.log(state.ratStar)
   }
 }
 
