@@ -14,5 +14,5 @@ npm install  //安装项目依赖
 npm run dev  //运行项目
 
 ```
-![image](https://github.com/MechelleLee/cateyes/cut1.png)
+
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
