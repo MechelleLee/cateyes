@@ -15,4 +15,6 @@ npm run dev  //运行项目
 
 ```
 
+![项目截图](https://github.com/MechelleLee/cateyes/pic/cut1.png)
+
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
