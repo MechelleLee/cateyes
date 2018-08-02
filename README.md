@@ -4,6 +4,8 @@
 
 ## Build Setup  运行方法
 
+打开cmd命令行
+
 ``` bash
 # install dependencies
 npm install  //安装项目依赖
