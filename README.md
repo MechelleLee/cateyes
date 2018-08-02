@@ -15,12 +15,16 @@ npm run dev  //运行项目
 
 ```
 项目截图
-```
+
+
 ![项目截图](https://github.com/MechelleLee/cateyes/raw/master/pic/cut1.png)
+
 
 ![项目截图](https://github.com/MechelleLee/cateyes/raw/master/pic/cut2.png)
 
+
 ![项目截图](https://github.com/MechelleLee/cateyes/raw/master/pic/cut3.png)
+
 
 ![项目截图](https://github.com/MechelleLee/cateyes/raw/master/pic/cut4.png)
 
